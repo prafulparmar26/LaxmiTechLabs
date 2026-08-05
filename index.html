@@ -12,10 +12,11 @@
 Laxmi Tech Labs | Software Development Company
 </title>
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+
 <meta name="description" content="
 Laxmi Tech Labs provides custom software development,
-web applications, mobile apps, cloud solutions and AI services.
+web applications, mobile apps, cloud solutions,
+desktop applications and ERP billing solutions.
 ">
 
 
@@ -23,16 +24,19 @@ web applications, mobile apps, cloud solutions and AI services.
 software development company,
 web development,
 mobile app development,
-cloud solutions,
-AI automation
+desktop application,
+billing software,
+ERP solutions
 ">
 
 
 <meta name="author" content="Laxmi Tech Labs">
 
 
+<link rel="icon" href="favicon.ico">
 
-<!-- Bootstrap CSS -->
+
+<!-- Bootstrap -->
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -42,7 +46,7 @@ AI automation
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 
-<!-- Google Font -->
+<!-- Font -->
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -56,10 +60,8 @@ AI automation
 --primary:#2563eb;
 --secondary:#7c3aed;
 --dark:#08111f;
---light:#f8fafc;
 
 }
-
 
 
 *{
@@ -83,10 +85,12 @@ scroll-behavior:smooth;
 body{
 
 font-family:'Inter',sans-serif;
+
+overflow-x:hidden;
+
 color:#1e293b;
 
 }
-
 
 
 
@@ -95,7 +99,8 @@ color:#1e293b;
 
 .navbar{
 
-padding:20px 0;
+padding:18px 0;
+
 transition:.4s;
 
 }
@@ -105,8 +110,8 @@ transition:.4s;
 .navbar.scrolled{
 
 background:#08111fe8;
+
 backdrop-filter:blur(10px);
-padding:12px 0;
 
 }
 
@@ -115,7 +120,9 @@ padding:12px 0;
 .navbar-brand{
 
 font-size:25px;
+
 font-weight:800;
+
 color:white!important;
 
 }
@@ -125,8 +132,10 @@ color:white!important;
 .nav-link{
 
 color:white!important;
+
+font-weight:600;
+
 margin-left:15px;
-font-weight:500;
 
 }
 
@@ -141,51 +150,50 @@ color:#60a5fa!important;
 
 
 
+
 /* HERO */
 
 
 .hero{
 
+
 min-height:100vh;
 
+
 background:
-linear-gradient(135deg,#08111f,#2563eb,#7c3aed);
+linear-gradient(
+135deg,
+#08111f,
+#2563eb,
+#7c3aed
+);
+
 
 display:flex;
+
 align-items:center;
 
+
 position:relative;
+
 overflow:hidden;
 
-}
 
+padding-top:80px;
 
-
-.hero:before{
-
-content:"";
-
-position:absolute;
-
-width:500px;
-height:500px;
-
-background:#ffffff20;
-
-border-radius:50%;
-
-top:-100px;
-right:-150px;
 
 }
-
 
 
 
 .hero h1{
 
 font-size:60px;
+
+line-height:1.15;
+
 font-weight:800;
+
 color:white;
 
 }
@@ -195,17 +203,25 @@ color:white;
 .hero p{
 
 font-size:20px;
+
 color:#e2e8f0;
+
 margin:25px 0;
+
+line-height:1.7;
 
 }
 
 
 
+/* BUTTON */
+
 
 .btn-primary-custom{
 
+
 background:white;
+
 color:#2563eb;
 
 padding:14px 35px;
@@ -214,19 +230,13 @@ border-radius:50px;
 
 font-weight:700;
 
-}
-
-
-
-.btn-primary-custom:hover{
-
-background:#e0e7ff;
 
 }
 
 
 
 .btn-outline-custom{
+
 
 border:2px solid white;
 
@@ -236,25 +246,29 @@ padding:12px 35px;
 
 border-radius:50px;
 
+
 }
 
 
 
 .btn-outline-custom:hover{
 
+
 background:white;
+
 color:#2563eb;
+
 
 }
 
 
 
 
-
-/* Dashboard */
+/* DASHBOARD */
 
 
 .dashboard{
+
 
 background:#ffffff20;
 
@@ -268,11 +282,13 @@ border-radius:25px;
 
 color:white;
 
+
 }
 
 
 
 .code-box{
+
 
 background:#020617;
 
@@ -284,13 +300,20 @@ font-family:monospace;
 
 color:#60a5fa;
 
+font-size:14px;
+
+
 }
 
 
 
 
 
+/* FLOATING TAGS */
+
+
 .tech-floating{
+
 
 position:absolute;
 
@@ -304,7 +327,9 @@ border-radius:50px;
 
 font-weight:700;
 
+
 animation:float 4s infinite;
+
 
 }
 
@@ -313,7 +338,9 @@ animation:float 4s infinite;
 .tech-one{
 
 top:20%;
-right:10%;
+
+right:8%;
+
 
 }
 
@@ -322,7 +349,9 @@ right:10%;
 .tech-two{
 
 bottom:20%;
+
 right:5%;
+
 
 }
 
@@ -345,101 +374,120 @@ transform:translateY(-20px);
 
 
 
-/* COMMON SECTION */
 
 
-.section-padding{
-
-padding:90px 0;
-
-}
-
-
-
-.section-title{
-
-text-align:center;
-
-margin-bottom:50px;
-
-}
-
-
-
-.section-title h2{
-
-font-size:40px;
-
-font-weight:800;
-
-}
-
-
-
-
-
-
-/* ABOUT */
-
-
-.about-box{
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 10px 30px #00000010;
-
-}
-
-
-
-
-.counter-box{
-
-text-align:center;
-
-background:#f8fafc;
-
-padding:25px;
-
-border-radius:20px;
-
-}
-
-
-
-.counter-box h3{
-
-font-size:40px;
-
-font-weight:800;
-
-color:#2563eb;
-
-}
-
-
-
-
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 
 @media(max-width:991px){
 
 
-.hero h1{
+.navbar{
 
-font-size:40px;
+background:#08111f;
 
 }
 
 
-.navbar{
 
-background:#08111f;
+.hero{
+
+text-align:center;
+
+padding:120px 0 70px;
+
+}
+
+
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+
+
+.hero p{
+
+font-size:18px;
+
+}
+
+
+
+.dashboard{
+
+margin-top:40px;
+
+}
+
+
+
+.tech-floating{
+
+display:none;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:576px){
+
+
+.navbar-brand{
+
+font-size:20px;
+
+}
+
+
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+
+
+.hero p{
+
+font-size:16px;
+
+}
+
+
+
+.btn-primary-custom,
+.btn-outline-custom{
+
+display:block;
+
+width:100%;
+
+margin:10px 0!important;
+
+
+}
+
+
+
+.dashboard{
+
+padding:18px;
+
+}
+
+
+
+.code-box{
+
+font-size:12px;
 
 }
 
@@ -455,10 +503,7 @@ background:#08111f;
 
 
 
-
 <body>
-
-
 
 
 
@@ -473,11 +518,22 @@ background:#08111f;
 
 <a class="navbar-brand" href="#">
 
-<img src="logo.png" alt="Laxmi Tech Labs Logo" width="40" height="40" class="me-2">
 
-<span style="color:#0d6efd;">Laxmi</span> Tech Labs
+<img src="logo.png"
+width="40"
+height="40"
+class="me-2">
+
+
+<span style="color:#0d6efd;">
+Laxmi
+</span>
+
+Tech Labs
+
 
 </a>
+
 
 
 
@@ -496,6 +552,7 @@ data-bs-target="#menu">
 
 
 
+
 <div class="collapse navbar-collapse" id="menu">
 
 
@@ -509,13 +566,11 @@ Home
 </li>
 
 
-
 <li class="nav-item">
 <a class="nav-link" href="#about">
 About
 </a>
 </li>
-
 
 
 <li class="nav-item">
@@ -525,15 +580,6 @@ Services
 </li>
 
 
-
-<li class="nav-item">
-<a class="nav-link" href="#technology">
-Technology
-</a>
-</li>
-
-
-
 <li class="nav-item">
 <a class="nav-link" href="#portfolio">
 Portfolio
@@ -541,13 +587,11 @@ Portfolio
 </li>
 
 
-
 <li class="nav-item">
 <a class="nav-link" href="#contact">
 Contact
 </a>
 </li>
-
 
 
 </ul>
@@ -565,8 +609,7 @@ Contact
 
 
 
-
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 
 <section class="hero" id="home">
@@ -578,9 +621,7 @@ Contact
 <div class="row align-items-center">
 
 
-
 <div class="col-lg-6">
-
 
 
 <h1>
@@ -593,8 +634,10 @@ Building Powerful Digital Solutions For Your Business
 
 <p>
 
-We develop scalable websites, mobile applications,
-SaaS platforms and custom software solutions.
+We develop scalable websites,
+mobile applications,
+desktop software,
+billing ERP systems and custom software solutions.
 
 </p>
 
@@ -610,6 +653,7 @@ Start Your Project
 
 
 
+
 <a href="#portfolio"
 class="btn btn-outline-custom">
 
@@ -618,15 +662,13 @@ View Portfolio
 </a>
 
 
-
-
 </div>
 
 
 
 
 
-<div class="col-lg-6 mt-5 mt-lg-0">
+<div class="col-lg-6">
 
 
 <div class="dashboard">
@@ -641,26 +683,29 @@ Software Development Dashboard
 
 <div class="code-box mt-4">
 
+
 &lt;laxmi_tech_labs&gt;
 
 <br>
 
-&nbsp;&nbsp;Innovative Software Solutions
+&nbsp;&nbsp;Custom Software Development
 
 <br>
 
-&nbsp;&nbsp;Custom Software Platform
+&nbsp;&nbsp;Billing ERP Solutions
 
 <br>
 
-&nbsp;&nbsp;Next Generation Technology
+&nbsp;&nbsp;Desktop Applications
+
+<br>
+
+&nbsp;&nbsp;Digital Transformation
 
 <br>
 
 &lt;/laxmi_tech_labs&gt;
 
-</div>
-
 
 </div>
 
@@ -668,12 +713,14 @@ Software Development Dashboard
 </div>
 
 
+</div>
+
+
 
 </div>
 
 
 </div>
-
 
 
 
@@ -684,24 +731,16 @@ Web Development
 </div>
 
 
-
 <div class="tech-floating tech-two">
 
-Digital Transformation
+ERP Solutions
 
 </div>
 
 
 
-
 </section>
-
-
-
-
-
-
-<!-- ABOUT SECTION -->
+<!-- ================= ABOUT SECTION ================= -->
 
 
 <section class="section-padding" id="about">
@@ -710,20 +749,16 @@ Digital Transformation
 <div class="container">
 
 
-<div class="section-title">
+<div class="section-title text-center mb-5">
 
 
 <h2>
-
 About Our Software Development Company
-
 </h2>
 
 
 <p>
-
 Creating innovative digital solutions for modern businesses.
-
 </p>
 
 
@@ -732,9 +767,7 @@ Creating innovative digital solutions for modern businesses.
 
 
 
-
-<div class="row align-items-center">
-
+<div class="row align-items-center g-4">
 
 
 <div class="col-lg-7">
@@ -747,7 +780,7 @@ Creating innovative digital solutions for modern businesses.
 
 Laxmi Tech Labs is a professional software development company
 specializing in custom software, web applications,
-mobile apps, cloud solutions and digital transformation.
+mobile apps, desktop applications, billing software and ERP solutions.
 
 </p>
 
@@ -755,18 +788,16 @@ mobile apps, cloud solutions and digital transformation.
 
 <p>
 
-Our developers build secure, scalable and high-performance
-applications that help businesses grow.
+We build secure, scalable and high-performance applications
+that help businesses improve productivity and growth.
 
 </p>
 
 
-
 </div>
 
 
 </div>
-
 
 
 
@@ -782,24 +813,13 @@ applications that help businesses grow.
 
 <div class="counter-box">
 
-<h3>10+</h3>
+<h3>
+10+
+</h3>
 
-<p>Years Experience</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-6">
-
-<div class="counter-box">
-
-<h3>50+</h3>
-
-<p>Projects</p>
+<p>
+Years Experience
+</p>
 
 </div>
 
@@ -812,9 +832,13 @@ applications that help businesses grow.
 
 <div class="counter-box">
 
-<h3>45+</h3>
+<h3>
+50+
+</h3>
 
-<p>Clients</p>
+<p>
+Projects
+</p>
 
 </div>
 
@@ -827,13 +851,37 @@ applications that help businesses grow.
 
 <div class="counter-box">
 
-<h3>20+</h3>
+<h3>
+45+
+</h3>
 
-<p>Developers</p>
+<p>
+Clients
+</p>
 
 </div>
 
 </div>
+
+
+
+
+<div class="col-6">
+
+<div class="counter-box">
+
+<h3>
+20+
+</h3>
+
+<p>
+Developers
+</p>
+
+</div>
+
+</div>
+
 
 
 
@@ -852,7 +900,14 @@ applications that help businesses grow.
 
 </section>
 
-<!-- SERVICES SECTION -->
+
+
+
+
+
+
+<!-- ================= SERVICES ================= -->
+
 
 
 <section class="section-padding bg-light" id="services">
@@ -861,7 +916,7 @@ applications that help businesses grow.
 <div class="container">
 
 
-<div class="section-title">
+<div class="section-title text-center mb-5">
 
 
 <h2>
@@ -879,11 +934,11 @@ Complete software development solutions for your business.
 
 
 
+
 <div class="row g-4">
 
 
 
-<!-- Service 1 -->
 
 
 <div class="col-md-6 col-lg-4">
@@ -901,7 +956,10 @@ Custom Software Development
 
 
 <p>
-Enterprise-grade software solutions designed according to your business requirements.
+
+Enterprise software solutions designed
+according to your business requirements.
+
 </p>
 
 
@@ -914,7 +972,6 @@ Enterprise-grade software solutions designed according to your business requirem
 
 
 
-<!-- Service 2 -->
 
 
 <div class="col-md-6 col-lg-4">
@@ -932,7 +989,10 @@ Web Application Development
 
 
 <p>
-Modern responsive websites and powerful web applications.
+
+Modern responsive websites and powerful
+web applications.
+
 </p>
 
 
@@ -945,35 +1005,9 @@ Modern responsive websites and powerful web applications.
 
 
 
-<!-- Service 3 -->
-<!-- Service: Billing & ERP -->
-
-<div class="col-md-6 col-lg-4">
-
-<div class="service-card">
-
-<i class="bi bi-receipt-cutoff"></i>
-
-<h4>
-Billing & ERP Solutions
-</h4>
-
-<p>
-Complete billing and ERP software solutions with invoicing,
-inventory management, GST reports and business automation.
-</p>
-
-</div>
-
-</div>
 
 
 
-
-
-
-
-<!-- Service 4 -->
 <div class="col-md-6 col-lg-4">
 
 
@@ -989,7 +1023,10 @@ Mobile App Development
 
 
 <p>
-Android and iOS applications with excellent user experience.
+
+Android and iOS applications
+with excellent user experience.
+
 </p>
 
 
@@ -1004,60 +1041,70 @@ Android and iOS applications with excellent user experience.
 
 
 
-<!-- Service 5 -->
-
-
 <div class="col-md-6 col-lg-4">
 
 
 <div class="service-card">
 
-
-<i class="bi bi-palette"></i>
-
-
-<h4>
-UI/UX Design
-</h4>
-
-
-<p>
-Creative and user-friendly interface designs for digital products.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- Service 6 -->
-
-
-<!-- Service: Desktop Application -->
-
-<div class="col-md-6 col-lg-4">
-
-<div class="service-card">
 
 <i class="bi bi-pc-display"></i>
+
 
 <h4>
 Desktop Application Development
 </h4>
 
+
 <p>
-Powerful desktop software solutions for business operations,
-management systems and custom enterprise applications.
+
+Powerful desktop software solutions
+for business operations and management.
+
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-6 col-lg-4">
+
+
+<div class="service-card">
+
+
+<i class="bi bi-receipt-cutoff"></i>
+
+
+<h4>
+Billing & ERP Solutions
+</h4>
+
+
+<p>
+
+Complete billing and ERP software with
+invoice, inventory, GST and reporting features.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
 
 
 <div class="col-md-6 col-lg-4">
@@ -1075,7 +1122,10 @@ Cloud Solutions
 
 
 <p>
-Secure cloud infrastructure and scalable cloud applications.
+
+Secure cloud infrastructure and
+scalable cloud applications.
+
 </p>
 
 
@@ -1083,6 +1133,7 @@ Secure cloud infrastructure and scalable cloud applications.
 
 
 </div>
+
 
 
 
@@ -1100,7 +1151,10 @@ Secure cloud infrastructure and scalable cloud applications.
 
 
 
-<!-- TECHNOLOGY SECTION -->
+
+
+<!-- ================= TECHNOLOGY ================= -->
+
 
 
 <section class="section-padding" id="technology">
@@ -1109,7 +1163,7 @@ Secure cloud infrastructure and scalable cloud applications.
 <div class="container">
 
 
-<div class="section-title">
+<div class="section-title text-center mb-5">
 
 
 <h2>
@@ -1130,6 +1184,10 @@ Technologies we use to build powerful applications.
 
 <div class="row g-4">
 
+
+
+
+
 <div class="col-6 col-md-3">
 
 <div class="service-card text-center">
@@ -1145,6 +1203,9 @@ Technologies we use to build powerful applications.
 </div>
 
 
+
+
+
 <div class="col-6 col-md-3">
 
 <div class="service-card text-center">
@@ -1158,6 +1219,8 @@ SQL Server
 </div>
 
 </div>
+
+
 
 
 
@@ -1197,6 +1260,7 @@ CSS3
 
 
 
+
 <div class="col-6 col-md-3">
 
 <div class="service-card text-center">
@@ -1215,6 +1279,7 @@ Angular
 
 
 
+
 <div class="col-6 col-md-3">
 
 <div class="service-card text-center">
@@ -1228,6 +1293,8 @@ React
 </div>
 
 </div>
+
+
 
 
 
@@ -1252,6 +1319,7 @@ Node.js
 
 
 
+
 <div class="col-6 col-md-3">
 
 <div class="service-card text-center">
@@ -1265,13 +1333,6 @@ Cloud
 </div>
 
 </div>
-
-
-
-
-
-
-
 
 
 
@@ -1290,7 +1351,8 @@ Cloud
 
 
 
-<!-- WHY CHOOSE US -->
+<!-- ================= WHY CHOOSE US ================= -->
+
 
 
 <section class="section-padding bg-light">
@@ -1299,8 +1361,7 @@ Cloud
 <div class="container">
 
 
-
-<div class="section-title">
+<div class="section-title text-center mb-5">
 
 
 <h2>
@@ -1318,10 +1379,7 @@ Reliable technology partner for your business growth.
 
 
 
-
 <div class="row g-4">
-
-
 
 
 
@@ -1329,19 +1387,15 @@ Reliable technology partner for your business growth.
 
 <div class="service-card">
 
-
 <i class="bi bi-people"></i>
-
 
 <h4>
 Experienced Developers
 </h4>
 
-
 <p>
-Professional developers with expertise in latest technologies.
+Professional developers with latest technology expertise.
 </p>
-
 
 </div>
 
@@ -1355,19 +1409,15 @@ Professional developers with expertise in latest technologies.
 
 <div class="service-card">
 
-
 <i class="bi bi-lightning"></i>
-
 
 <h4>
 Agile Development
 </h4>
 
-
 <p>
-Fast and flexible development process with regular updates.
+Fast and flexible development process.
 </p>
-
 
 </div>
 
@@ -1381,97 +1431,15 @@ Fast and flexible development process with regular updates.
 
 <div class="service-card">
 
-
 <i class="bi bi-shield-check"></i>
-
 
 <h4>
 Secure Applications
 </h4>
 
-
 <p>
 High quality and secure software solutions.
 </p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="col-md-4">
-
-<div class="service-card">
-
-
-<i class="bi bi-clock-history"></i>
-
-
-<h4>
-On-Time Delivery
-</h4>
-
-
-<p>
-Projects delivered according to planned schedules.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="col-md-4">
-
-<div class="service-card">
-
-
-<i class="bi bi-headset"></i>
-
-
-<h4>
-24/7 Support
-</h4>
-
-
-<p>
-Continuous technical assistance and maintenance.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="col-md-4">
-
-<div class="service-card">
-
-
-<i class="bi bi-currency-dollar"></i>
-
-
-<h4>
-Competitive Pricing
-</h4>
-
-
-<p>
-Affordable solutions without compromising quality.
-</p>
-
 
 </div>
 
@@ -1494,8 +1462,8 @@ Affordable solutions without compromising quality.
 
 
 
+<!-- ================= DEVELOPMENT PROCESS ================= -->
 
-<!-- DEVELOPMENT PROCESS -->
 
 
 <section class="section-padding">
@@ -1504,7 +1472,7 @@ Affordable solutions without compromising quality.
 <div class="container">
 
 
-<div class="section-title">
+<div class="section-title text-center mb-5">
 
 
 <h2>
@@ -1523,10 +1491,7 @@ From idea to successful product delivery.
 
 
 
-
 <div class="row g-4 text-center">
-
-
 
 
 
@@ -1545,7 +1510,6 @@ Requirement Analysis
 </div>
 
 </div>
-
 
 
 
@@ -1569,7 +1533,6 @@ UI/UX Design
 
 
 
-
 <div class="col-6 col-md-2">
 
 <div class="service-card">
@@ -1585,7 +1548,6 @@ Development
 </div>
 
 </div>
-
 
 
 
@@ -1609,7 +1571,6 @@ Testing
 
 
 
-
 <div class="col-6 col-md-2">
 
 <div class="service-card">
@@ -1625,7 +1586,6 @@ Deployment
 </div>
 
 </div>
-
 
 
 
@@ -1648,8 +1608,6 @@ Maintenance
 
 
 
-
-
 </div>
 
 
@@ -1657,8 +1615,7 @@ Maintenance
 
 
 </section>
-
-<!-- PORTFOLIO SECTION -->
+<!-- ================= PORTFOLIO ================= -->
 
 
 <section class="section-padding bg-light" id="portfolio">
@@ -1667,15 +1624,18 @@ Maintenance
 <div class="container">
 
 
-<div class="section-title">
+<div class="section-title text-center mb-5">
+
 
 <h2>
 Our Portfolio
 </h2>
 
+
 <p>
 Successful digital products created by our team.
 </p>
+
 
 </div>
 
@@ -1720,6 +1680,7 @@ View Details
 
 
 
+
 <div class="col-md-6 col-lg-4">
 
 <div class="service-card">
@@ -1753,31 +1714,70 @@ View Details
 
 
 
-<!-- Billing Software Project -->
 
 <div class="col-md-6 col-lg-4">
 
 <div class="service-card">
 
+
 <i class="bi bi-receipt-cutoff"></i>
+
 
 <h4>
 Desktop Billing Software
 </h4>
 
+
 <p>
-Complete desktop billing solution for shops and businesses
-with invoice generation, inventory management, GST reports
-and customer management features.
+Billing software with invoice generation,
+inventory management, GST reports and customer records.
 </p>
+
 
 <button class="btn btn-primary">
 View Details
 </button>
 
+
 </div>
 
 </div>
+
+
+
+
+
+
+
+
+<div class="col-md-6 col-lg-4">
+
+<div class="service-card">
+
+
+<i class="bi bi-building"></i>
+
+
+<h4>
+University Management System
+</h4>
+
+
+<p>
+Complete university solution for student records,
+admission, attendance, examination and fees management.
+</p>
+
+
+<button class="btn btn-primary">
+View Details
+</button>
+
+
+</div>
+
+</div>
+
 
 
 
@@ -1818,37 +1818,6 @@ View Details
 
 
 
-<!-- University Management System -->
-
-<div class="col-md-6 col-lg-4">
-
-<div class="service-card">
-
-<i class="bi bi-building"></i>
-
-<h4>
-University Management System
-</h4>
-
-<p>
-Complete university management solution for student records,
-admission management, attendance, examination, fees,
-and academic administration.
-</p>
-
-<button class="btn btn-primary">
-View Details
-</button>
-
-</div>
-
-</div>
-
-
-
-
-
-
 
 <div class="col-md-6 col-lg-4">
 
@@ -1880,7 +1849,6 @@ View Details
 
 
 
-
 </div>
 
 
@@ -1895,27 +1863,18 @@ View Details
 
 
 
-<!-- PRICING SECTION -->
 
- 
-
+<!-- ================= TESTIMONIALS ================= -->
 
 
-
-
-
-
-
-<!-- TESTIMONIALS -->
-
-
-<section class="section-padding bg-light" id="testimonials">
+<section class="section-padding" id="testimonials">
 
 
 <div class="container">
 
 
-<div class="section-title">
+<div class="section-title text-center mb-5">
+
 
 <h2>
 Client Testimonials
@@ -1926,8 +1885,8 @@ Client Testimonials
 What our clients say about our services.
 </p>
 
-</div>
 
+</div>
 
 
 
@@ -1956,23 +1915,16 @@ John Anderson
 
 
 <p>
+
 "Laxmi Tech Labs delivered an excellent software solution.
 Their development quality and support are outstanding."
+
 </p>
 
 
 <div class="text-warning">
 
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
+★★★★★
 
 </div>
 
@@ -1981,6 +1933,8 @@ Their development quality and support are outstanding."
 
 
 </div>
+
+
 
 
 
@@ -2004,23 +1958,16 @@ Sarah Williams
 
 
 <p>
+
 "Professional team with great technical knowledge.
 They transformed our idea into a powerful application."
+
 </p>
 
 
 <div class="text-warning">
 
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
-<i class="bi bi-star-fill"></i>
-
+★★★★★
 
 </div>
 
@@ -2029,7 +1976,6 @@ They transformed our idea into a powerful application."
 
 
 </div>
-
 
 
 
@@ -2048,16 +1994,19 @@ They transformed our idea into a powerful application."
 
 
 
-<!-- CONTACT SECTION -->
 
 
-<section class="section-padding" id="contact">
+<!-- ================= CONTACT ================= -->
+
+
+
+<section class="section-padding bg-light" id="contact">
 
 
 <div class="container">
 
 
-<div class="section-title">
+<div class="section-title text-center mb-5">
 
 
 <h2>
@@ -2077,9 +2026,7 @@ Start your next digital project with us.
 
 
 
-
 <div class="row g-5">
-
 
 
 
@@ -2097,8 +2044,8 @@ Send Message
 
 
 
-<form>
 
+<form>
 
 
 <input type="text"
@@ -2125,6 +2072,7 @@ placeholder="Your Message"></textarea>
 
 
 
+
 <button class="btn btn-primary px-5">
 
 Submit
@@ -2132,9 +2080,7 @@ Submit
 </button>
 
 
-
 </form>
-
 
 
 </div>
@@ -2169,12 +2115,13 @@ Rajkot, Gujarat, India
 </p>
 
 
+
 <p>
 <i class="bi bi-envelope-fill text-primary"></i>
 
 laxmitechlabs@gmail.com
-</p>
 
+</p>
 
 
 
@@ -2182,7 +2129,9 @@ laxmitechlabs@gmail.com
 <i class="bi bi-telephone-fill text-primary"></i>
 
 +91 7990226909
+
 </p>
+
 
 
 
@@ -2190,15 +2139,15 @@ laxmitechlabs@gmail.com
 
 <div class="ratio ratio-16x9">
 
+
 <iframe
-src="https://maps.google.com/maps?q=Rajkot,Gujarat,India&t=&z=13&ie=UTF8&iwloc=&output=embed"
-allowfullscreen=""
+
+src="https://maps.google.com/maps?q=Rajkot,Gujarat,India&output=embed"
+
 loading="lazy">
+
 </iframe>
 
-</div>
-
-
 
 </div>
 
@@ -2206,6 +2155,7 @@ loading="lazy">
 </div>
 
 
+</div>
 
 
 
@@ -2225,7 +2175,7 @@ loading="lazy">
 
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 
 <footer class="bg-dark text-white py-5">
@@ -2238,23 +2188,29 @@ loading="lazy">
 
 
 
-
-
 <div class="col-lg-4">
 
 
 <h3>
 
-<img src="logo.png" alt="Laxmi Tech Labs Logo" width="40" height="40" class="me-2">
+<img src="logo.png"
+width="40"
+height="40">
 
-<span style="color:#0d6efd;">Laxmi</span> Tech Labs
+<span class="text-primary">
+Laxmi
+</span>
+
+Tech Labs
 
 </h3>
 
 
+
 <p>
 
-Building innovative software solutions for businesses worldwide.
+Building innovative software solutions
+for businesses worldwide.
 
 </p>
 
@@ -2274,39 +2230,28 @@ Quick Links
 </h5>
 
 
-<a href="#home"
-class="text-white text-decoration-none d-block">
-
+<a href="#home" class="text-white d-block">
 Home
-
 </a>
 
 
-<a href="#services"
-class="text-white text-decoration-none d-block">
-
+<a href="#services" class="text-white d-block">
 Services
-
 </a>
 
 
-<a href="#portfolio"
-class="text-white text-decoration-none d-block">
-
+<a href="#portfolio" class="text-white d-block">
 Portfolio
-
 </a>
 
 
-<a href="#contact"
-class="text-white text-decoration-none d-block">
-
+<a href="#contact" class="text-white d-block">
 Contact
-
 </a>
 
 
 </div>
+
 
 
 
@@ -2323,7 +2268,9 @@ Follow Us
 
 <i class="bi bi-facebook fs-3 me-3"></i>
 
+
 <i class="bi bi-linkedin fs-3 me-3"></i>
+
 
 <i class="bi bi-instagram fs-3"></i>
 
@@ -2332,9 +2279,7 @@ Follow Us
 
 
 
-
 </div>
-
 
 
 
@@ -2343,9 +2288,12 @@ Follow Us
 
 
 <p class="text-center mb-0">
-    &copy; <span id="year"></span> Laxmi Tech Labs. All Rights Reserved.
-</p>
 
+© <span id="year"></span>
+Laxmi Tech Labs.
+All Rights Reserved.
+
+</p>
 
 
 
@@ -2353,8 +2301,6 @@ Follow Us
 
 
 </footer>
-
-
 
 
 
@@ -2380,29 +2326,12 @@ class="btn btn-primary rounded-circle">
 
 
 
+
 <style>
 
 
-#topBtn{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-display:none;
-
-width:45px;
-
-height:45px;
-
-z-index:9999;
-
-}
-
-
-
+.about-box,
+.counter-box,
 .service-card{
 
 padding:35px;
@@ -2423,7 +2352,7 @@ transition:.3s;
 
 .service-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
 }
 
@@ -2441,8 +2370,26 @@ margin-bottom:20px;
 
 
 
-</style>
+#topBtn{
 
+position:fixed;
+
+right:20px;
+
+bottom:20px;
+
+display:none;
+
+width:45px;
+
+height:45px;
+
+z-index:999;
+
+}
+
+
+</style>
 
 
 
@@ -2459,11 +2406,11 @@ margin-bottom:20px;
 
 
 
-
 <script>
 
 
-// Navbar scroll
+// Navbar background
+
 
 window.addEventListener("scroll",()=>{
 
@@ -2497,7 +2444,6 @@ nav.classList.remove("scrolled");
 let topBtn=document.getElementById("topBtn");
 
 
-
 window.addEventListener("scroll",()=>{
 
 
@@ -2519,7 +2465,7 @@ topBtn.style.display="none";
 
 
 
-topBtn.onclick=function(){
+topBtn.onclick=()=>{
 
 
 window.scrollTo({
@@ -2566,7 +2512,10 @@ new bootstrap.Collapse(menu).hide();
 
 
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+document.getElementById("year").innerHTML =
+new Date().getFullYear();
 
 
 
